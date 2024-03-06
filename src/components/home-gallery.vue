@@ -63,13 +63,13 @@ padding: 60px 150px;
 @media (max-width: 768px) {
   .gallery-item {
    
-    margin: 10px; /* Öğeler arasındaki boşluğu azaltın */
+    margin: 10px; 
   }
 
   .gallery-item img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Resimleri sıkıştırmadan uygun şekilde yerleştirin */
+    object-fit: cover;
   }
 }
 
