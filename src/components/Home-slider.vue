@@ -69,19 +69,19 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  text-align: center; /* Metni ve butonu ortala */
+  text-align: center; 
 }
 
 .slider-text h1 {
   color: aliceblue;
-  font-size: 70px; /* Boyutu küçült */
+  font-size: 70px; 
   margin-bottom: 10px;
 }
 
 .slider-text button {
   background-color: rgb(24, 24, 25);
   color: aliceblue;
-  font-size: 24px; /* Boyutu küçült */
+  font-size: 24px; 
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -92,7 +92,7 @@ export default {
 
 .swiper-container {
   width: 100%;
-  height: 70vh; /* Adjust the height as needed */
+  height: 70vh;
   position: relative;
   z-index: 0;
 }

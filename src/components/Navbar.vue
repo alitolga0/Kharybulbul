@@ -2,8 +2,17 @@
   <div class="header_container">
     <div class="navigation">
       <ul class="menu" :class="{ 'show-menu': isShowMenu }">
+        <div>
+          <img
+            style="width: 50px; height: 50px; margin-right: 100px"
+            src="@/assets/gold_logo.jpg"
+            alt=""
+          />
+        </div>
         <li v-for="navItem in navItems" :key="navItem.id">
-          <router-link :to="navItem.link">{{ navItem.page }}</router-link>
+          <router-link :to="{ name: navItem.link.name }">{{
+            navItem.page
+          }}</router-link>
         </li>
       </ul>
     </div>
@@ -22,11 +31,11 @@ export default {
   data() {
     return {
       navItems: [
-        { page: "Ana Səhifə", link: "/Ana Səhifə" },
-        { page: "Katalog", link: "/Katalog" },
-        { page: "Galereya", link: "/Galereya" },
-        { page: "Haqqımızda", link: "/Haqqımızda" },
-        { page: "Əlaqə", link: "/Əlaqə" },
+        { id: 1, page: "Ana Səhifə", link: { name: 'AnaSayfa' } },
+        { id: 2, page: "Katalog", link: { name: 'mKatalog' } },
+        { id: 3, page: "Galereya", link: { name: 'Galerya' } },
+        { id: 4, page: "Haqqımızda", link: { name: 'Hakkimizda' } },
+        { id: 5, page: "Əlaqə", link: { name: 'Iletisim' } },
       ],
       isShowMenu: false,
       isMobile: false,
@@ -45,6 +54,7 @@ export default {
     window.removeEventListener("resize", this.checkMobile);
   },
 };
+
 </script>
 
 <style scoped>
@@ -64,7 +74,7 @@ export default {
 .header_container {
   width: 100%;
   height: 10vh;
-   top: 0;
+  top: 0;
   left: 0;
   z-index: 999;
   position: fixed;
@@ -77,7 +87,6 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 10px;
- 
 }
 
 .header_container .navigation .menu li {
